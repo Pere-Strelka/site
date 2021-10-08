@@ -16,7 +16,8 @@
   width: 20%;
 }
 
-.table {
+.table, th, td {
   width: 100%;
   color: #dfe6e9;
+  border: 1px solid #dfe6e9;
 }
