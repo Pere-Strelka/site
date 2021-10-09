@@ -7,13 +7,7 @@
   color: #dfe6e9;
 }
 .head {
-  background-color: #00b1f1;
-  height: 1000px;
-}
-.head_div {
-  background-color: #6c5ce7;
-  height: 80%;
-  width: 20%;
+  height: 15%;
 }
 
 .table, th, td {
