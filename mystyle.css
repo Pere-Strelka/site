@@ -1,3 +1,27 @@
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  margin-block: 0.25em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #636e72;
+  border-radius: 75vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7f8c91;
+}
+
+@supports (scrollbar-color: #636e72 #2d3436) {
+  * {
+    scrollbar-color: #636e72 #2d3436;
+    scrollbar-width: auto;
+  }
+}
+
 .body {
   background-color: #2d3436;
   margin: 0;
@@ -9,7 +33,13 @@
   color: #dfe6e9;
 }
 
-.img-container {
+.title {
+  margin: 8px;
+  font-size: 36pt;
+  color: #dfe6e9;
+}
+
+/* .img-container {
   background-color: #000000;
   width: 100%;
 }
@@ -40,7 +70,7 @@
   .header-img {        
     background: url("nick_cut2560x350.jpg");
   } 
-}
+} */
 
 /* @media (min-width: 1200px) {    
   .header-img {         
