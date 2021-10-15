@@ -11,6 +11,8 @@
 
   --border-size: 3px;
 
+  --nav-btn-anim: 250ms cubic-bezier(0.65, 0.05, 0.36, 1);
+
 
   background-color: var(--background-color-body);
   margin: 0 !important;
@@ -89,34 +91,69 @@
   display: inline-block;
 }
 
-/* .nav-btn:hover {
-  background-color: var(--nav-btn-hover-color);
-} */
-
-.nav-btn::before {
+.nav-btn-main::before {
   content: "";
   position: absolute;
-  right: 0;
-  left: 0;
+  width: var(--nav-btn-main-width);
+  right: auto;
+  left: var(--nav-btn-main-offset);
   top: 0;
   height: var(--border-size);
   background-color: var(--accent-color);
-  transition: transform 500ms cubic-bezier(0.65, 0.05, 0.36, 1);;
+  transition: transform var(--nav-btn-anim);
 
   transform: scaleX(0);
 }
 
-.nav-btn:hover::before,
-.nav-btn:focus::before {
+.nav-btn-main:hover::before,
+.nav-btn-main:focus::before {
+  transform: scaleX(1);
+} 
+
+.nav-btn-portfolio::before {
+  content: "";
+  position: absolute;
+  width: var(--nav-btn-portfolio-width);
+  right: auto;
+  left: var(--nav-btn-portfolio-offset);
+  top: 0;
+  height: var(--border-size);
+  background-color: var(--accent-color);
+  transition: transform var(--nav-btn-anim);
+
+  transform: scaleX(0);
+}
+
+.nav-btn-portfolio:hover::before,
+.nav-btn-portfolio:focus::before {
   transform: scaleX(1);
 }
 
+.nav-btn-contacts::before {
+  content: "";
+  position: absolute;
+  width: var(--nav-btn-contacts-width);
+  right: auto;
+  left: var(--nav-btn-contacts-offset);
+  top: 0;
+  height: var(--border-size);
+  background-color: var(--accent-color);
+  transition: transform var(--nav-btn-anim);
+
+  transform: scaleX(0);
+}
+
+.nav-btn-contacts:hover::before,
+.nav-btn-contacts:focus::before {
+  transform: scaleX(1);
+}
 
 .nav-center {
   display: block;
   margin-right: auto;
   margin-left: auto;
   width: fit-content;
+  overflow: hidden;
 }
 
 .navigation {
