@@ -193,7 +193,7 @@
   }
 } 
 
-@media screen and (min-width: 600px) and (max-width: 900px){      
+@media screen and (min-width: 600px) and (max-width: 1000px){      
   .header-nickname {
     font-size: 7rem;
     margin-left: auto;
@@ -209,7 +209,7 @@
   }
 } 
 
-@media (min-width: 900px) {      
+@media (min-width: 1000px) {      
   .header-nickname {
     font-size: 2.5rem;
     margin-left: 2em;
