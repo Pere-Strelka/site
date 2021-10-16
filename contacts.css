@@ -1,0 +1,33 @@
+.cards {
+    width: fit-content;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.card {
+    --shadow-color: rgba(43, 37, 37, 0.555);
+    --card-size: 12rem;
+    --card-color: #576574;
+
+    width: var(--card-size);
+    height: var(--card-size);
+    background-color: var(--card-color);
+    display: inline-block;
+    margin: 1rem;
+    box-shadow: 8px 8px 5px 1px var(--shadow-color);
+}
+
+.card-banner {
+    position: relative;
+    top: calc(var(--card-size) * 0.8);
+    left: 0;
+    right: 0;
+    width: var(--card-size);
+    height: calc(var(--card-size) * 0.20);
+    background-color: inherit;
+}
+
+

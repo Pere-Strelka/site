@@ -60,6 +60,7 @@
 }
 
 .header-nickname {
+  cursor: pointer;
   font-size: var(--header-nickname-size);
   width: var(--header-nickname-width);
   text-align: var(--header-nickname-text-align);
@@ -76,6 +77,7 @@
 .nav-btn {
   font-size: var(--nav-btn-text-size);
   border: none;
+  cursor: pointer;
   color: var(--accent-color);
   height: fit-content;
   width: fit-content;
