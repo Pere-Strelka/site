@@ -85,6 +85,8 @@
   padding-top: 0.75em;
   padding-bottom: 0.75em;
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-btn-main::before {
@@ -186,14 +188,12 @@
   .nav-btn {
     font-size: 1.6rem;
 
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
   }
 } 
 
-@media screen and (min-width: 600px) and (max-width: 900px){      
+@media screen and (min-width: 600px) and (max-width: 1000px){      
   .header-nickname {
     font-size: 4rem;
     margin-left: auto;
@@ -204,14 +204,12 @@
   .nav-btn {
     font-size: 1.6rem;
 
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 } 
 
-@media (min-width: 900px) {      
+@media (min-width: 1000px) {      
   .header-nickname {
     font-size: 2.5rem;
     margin-left: 2em;
@@ -219,8 +217,6 @@
   .nav-btn {
     font-size: 1.1rem;
 
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 3rem;
     padding-right: 3rem;
   }
