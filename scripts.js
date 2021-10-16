@@ -33,18 +33,21 @@ function getDeviceType() {
 
 function initProperties() {
     if (deviceType == "tablet") {
+        root.style.setProperty('--header-nickname-width', 'auto');
         root.style.setProperty('--header-nickname-text-align', 'unset');
         root.style.setProperty('--nav-btn-text-size', '1.5rem');
         root.style.setProperty('--header-nickname-size', '3rem');
         root.style.setProperty('--header-nickname-margin-left', '2em');
         root.style.setProperty('--nav-btn-padding', '2.5rem');
     } else if (deviceType == 'mobile') {
+        root.style.setProperty('--header-nickname-width', '100%');
         root.style.setProperty('--header-nickname-text-align', 'center');
         root.style.setProperty('--nav-btn-text-size', '3rem');
         root.style.setProperty('--header-nickname-size', '6rem');
         root.style.setProperty('--header-nickname-margin-left', 'auto');
         root.style.setProperty('--nav-btn-padding', '2rem');
     } else {
+        root.style.setProperty('--header-nickname-width', 'auto');
         root.style.setProperty('--header-nickname-text-align', 'unset');
         root.style.setProperty('--nav-btn-text-size', '1.1rem');
         root.style.setProperty('--header-nickname-size', '2.5rem');
