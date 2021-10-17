@@ -16,14 +16,14 @@ function getOffset(el) {
     return { top: _y, left: _x };
 }
 
-async function copyToClipboard(str_to_copy="pere_strelka@mail.ru", parent_el_id) {
+async function copyToClipboard(str, parent_el_id) {
 
-    navigator.clipboard.writeText(str_to_copy);
+    navigator.clipboard.writeText(str);
     
     var text = document.createElement("div");
     text.classList.add("card-banner-text");
     text.classList.add("card-banner-text-copied");
-    text.innerHTML = 'COPIED: ' + str_to_copy;
+    text.innerHTML = 'COPIED: ' + str;
     document.getElementById(parent_el_id).appendChild(text);
 
     await sleep(2000);
