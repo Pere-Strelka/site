@@ -16,7 +16,7 @@ function getOffset(el) {
     return { top: _y, left: _x };
 }
 
-async function copyToClipboard(str_to_copy, parent_el_id) {
+async function copyToClipboard(str_to_copy="pere_strelka@mail.ru", parent_el_id) {
 
     navigator.clipboard.writeText(str_to_copy);
     
@@ -38,14 +38,11 @@ function makeNavProperties(root, el_name) {
 function getDeviceType() {
     const userAgent = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
-        console.log("tablet");
         return "tablet";
     }
     if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
-        console.log("mobile");
         return "mobile";
     }
-    console.log("desktop");
     return "desktop";
 };
 
