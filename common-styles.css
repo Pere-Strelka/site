@@ -7,7 +7,7 @@
   --gradient-nickname-color3: #a29bfe;
   --nav-btn-hover-color: rgba(15, 13, 17, 0.7);
   --nav-background-color: #32353a;
-  --light-text-color: #dfe6e9;
+  --light-text-color: #cbd7db;
 
   --border-size: 3px;
 
@@ -72,6 +72,23 @@
   -webkit-text-fill-color: transparent;
   margin-left: var(--header-nickname-margin-left);
   margin-right: auto;
+}
+
+.navigation {
+  background-color: var(--nav-background-color);
+  width: 100%;
+  vertical-align: middle;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0em;
+  opacity: 0.975;
+}
+
+.nav-center {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
 }
 
 .nav-btn {
@@ -154,23 +171,6 @@
 .nav-btn-contacts:hover::before,
 .nav-btn-contacts:focus::before {
   transform: scaleX(1);
-}
-
-.nav-center {
-  display: table;
-  margin-right: auto;
-  margin-left: auto;
-  overflow: hidden;
-}
-
-.navigation {
-  background-color: var(--nav-background-color);
-  width: 100%;
-  vertical-align: middle;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0em;
-  opacity: 0.975;
 }
 
 

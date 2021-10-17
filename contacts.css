@@ -1,33 +1,103 @@
 .cards {
-    width: fit-content;
+    width: 80%;
     height: auto;
-    display: block;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 
 .card {
     --shadow-color: rgba(43, 37, 37, 0.555);
-    --card-size: 12rem;
-    --card-color: #576574;
+    --card-size: 18rem;
+    --card-color: #333;
 
     width: var(--card-size);
     height: var(--card-size);
     background-color: var(--card-color);
-    display: inline-block;
-    margin: 1rem;
+    display: block;
     box-shadow: 8px 8px 5px 1px var(--shadow-color);
+    position: relative;
+    color: var(--light-text-color);
 }
 
 .card-banner {
-    position: relative;
-    top: calc(var(--card-size) * 0.8);
+    position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
     width: var(--card-size);
-    height: calc(var(--card-size) * 0.20);
-    background-color: inherit;
+    height: calc(var(--card-size) * 0.2);
+    background-color: var(--card-color);
+
+    transition: 400ms cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
+.card-banner-text {
+    color: var(--light-text-color);
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.card-banner-text-copied {
+    background-color: var(--card-color);
+}
+
+.card-discord {
+    background: url("images/cards/card-discord.jpg");
+    background-size: 100%;
+}
+
+.card-discord:hover .card-banner-discord {
+    height: var(--card-size);
+    cursor: pointer;
+}
+
+.card-vk {
+    background: url("images/cards/card-vk.jpg");
+    background-size: 100%;
+}
+
+.card-vk:hover .card-banner-vk {
+    height: var(--card-size);
+    cursor: pointer;
+}
+
+.card-email {
+    background: url("images/cards/card-email.jpg");
+    background-size: 100%;
+}
+
+.card-email:hover .card-banner-email {
+    height: var(--card-size);
+    cursor: pointer;
+}
 

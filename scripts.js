@@ -1,6 +1,10 @@
 var root = document.querySelector(':root');
 const deviceType = getDeviceType();
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function getOffset(el) {
     var _x = 0;
     var _y = 0;
@@ -10,6 +14,25 @@ function getOffset(el) {
         el = el.offsetParent;
     }
     return { top: _y, left: _x };
+}
+
+async function copyToClipboard(str, parent_el_id) {    
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    el.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(el.value);
+    
+    var text = document.createElement("div");
+    text.classList.add("card-banner-text");
+    text.classList.add("card-banner-text-copied");
+    text.innerHTML = 'COPIED: ' + el.value;
+    document.getElementById(parent_el_id).appendChild(text);
+
+    await sleep(2000);
+    document.getElementById(parent_el_id).removeChild(text);
+    document.body.removeChild(el);
 }
 
 function makeNavProperties(root, el_name) {
