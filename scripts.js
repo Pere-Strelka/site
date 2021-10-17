@@ -18,7 +18,7 @@ function getOffset(el) {
 
 async function copyToClipboard(str_to_copy="pere_strelka@mail.ru", parent_el_id) {
 
-    navigator.clipboard.writeText(str_to_copy);
+    navigator.clipboard.writeText("pere_strelka@mail.ru");
     
     var text = document.createElement("div");
     text.classList.add("card-banner-text");
