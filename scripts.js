@@ -17,19 +17,13 @@ function getOffset(el) {
 }
 
 async function copyToClipboard(str, parent_el_id) {    
-    const el = document.createElement('textarea');
-    el.value = str;
-    document.body.appendChild(el);
-    el.select();
-    el.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(el.value);
+    navigator.clipboard.writeText(str);
     
     var text = document.createElement("div");
     text.classList.add("card-banner-text");
     text.classList.add("card-banner-text-copied");
-    text.innerHTML = 'COPIED: ' + el.value;
+    text.innerHTML = 'COPIED: ' + str;
     document.getElementById(parent_el_id).appendChild(text);
-    document.body.removeChild(el);
 
     await sleep(2000);
     document.getElementById(parent_el_id).removeChild(text);
