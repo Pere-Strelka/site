@@ -82,6 +82,7 @@
   position: sticky;
   top: 0em;
   opacity: 0.975;
+  z-index: 100;
 }
 
 .nav-center {
@@ -94,6 +95,7 @@
 .nav-btn {
   font-size: var(--nav-btn-text-size);
   border: none;
+  position: relative;
   cursor: pointer;
   color: var(--accent-color);
   height: fit-content;
@@ -116,12 +118,12 @@
   padding-right: var(--nav-btn-padding);
 }
 
-.nav-btn-main::before {
+.nav-btn::before {
   content: "";
   position: absolute;
-  width: var(--nav-btn-main-width);
-  right: auto;
-  left: var(--nav-btn-main-offset);
+  width: 100%;
+  right: 0;
+  left: 0;
   top: 0;
   height: var(--border-size);
   background-color: var(--accent-color);
@@ -130,48 +132,10 @@
   transform: scaleX(0);
 }
 
-.nav-btn-main:hover::before,
-.nav-btn-main:focus::before {
+.nav-btn:hover::before,
+.nav-btn:focus::before {
   transform: scaleX(1);
 } 
-
-.nav-btn-portfolio::before {
-  content: "";
-  position: absolute;
-  width: var(--nav-btn-portfolio-width);
-  right: auto;
-  left: var(--nav-btn-portfolio-offset);
-  top: 0;
-  height: var(--border-size);
-  background-color: var(--accent-color);
-  transition: transform var(--nav-btn-anim);
-
-  transform: scaleX(0);
-}
-
-.nav-btn-portfolio:hover::before,
-.nav-btn-portfolio:focus::before {
-  transform: scaleX(1);
-}
-
-.nav-btn-contacts::before {
-  content: "";
-  position: absolute;
-  width: var(--nav-btn-contacts-width);
-  right: auto;
-  left: var(--nav-btn-contacts-offset);
-  top: 0;
-  height: var(--border-size);
-  background-color: var(--accent-color);
-  transition: transform var(--nav-btn-anim);
-
-  transform: scaleX(0);
-}
-
-.nav-btn-contacts:hover::before,
-.nav-btn-contacts:focus::before {
-  transform: scaleX(1);
-}
 
 
 
