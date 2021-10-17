@@ -29,10 +29,10 @@ async function copyToClipboard(str, parent_el_id) {
     text.classList.add("card-banner-text-copied");
     text.innerHTML = 'COPIED: ' + el.value;
     document.getElementById(parent_el_id).appendChild(text);
+    document.body.removeChild(el);
 
     await sleep(2000);
     document.getElementById(parent_el_id).removeChild(text);
-    document.body.removeChild(el);
 }
 
 function makeNavProperties(root, el_name) {
