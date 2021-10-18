@@ -1,3 +1,8 @@
+:root {
+    --shadow-color: rgba(43, 37, 37, 0.555);
+    --card-color: #333;
+}
+
 .cards {
     width: 80%;
     height: auto;
@@ -7,29 +12,36 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     grid-gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
 }
 
+.cards-mobile-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
 @media (max-width: 800px) {
-    .cards {
+    .cards-desktop-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
-    .cards {
+    .cards-desktop-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 }
 
-.card {
-    --shadow-color: rgba(43, 37, 37, 0.555);
-    --card-size: 18rem;
-    --card-color: #333;
+@media (min-width: 1200px) {
+    .cards-desktop-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
 
+.card {
     width: var(--card-size);
     height: var(--card-size);
     background-color: var(--card-color);
@@ -55,7 +67,7 @@
 
 .card-banner-text {
     color: var(--light-text-color);
-    font-size: 2rem;
+    font-size: var(--cord-banner-font-size);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     text-align: center;

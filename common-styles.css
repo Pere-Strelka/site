@@ -1,4 +1,4 @@
-.general {
+:root {
   --background-color-body: #353b48;
   --background-color-header: #28292e;
   --scrollbar-thumb-color: #636e72;
@@ -12,8 +12,9 @@
   --border-size: 3px;
 
   --nav-btn-anim: 250ms cubic-bezier(0.65, 0.05, 0.36, 1);
+}
 
-
+.general {
   background-color: var(--background-color-body);
   margin: 0 !important;
 }

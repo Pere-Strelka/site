@@ -6,7 +6,6 @@ function sleep(ms) {
 }
 
 async function copyToClipboard(str, parent_el_id) {
-
     navigator.clipboard.writeText(str);
     
     var text = document.createElement("div");
@@ -30,7 +29,7 @@ function getDeviceType() {
     return "desktop";
 };
 
-function initProperties() {
+function initDefaultProperties() {
     if (deviceType == "tablet") {
         root.style.setProperty('--header-nickname-width', 'auto');
         root.style.setProperty('--header-nickname-text-align', 'unset');
@@ -41,8 +40,8 @@ function initProperties() {
     } else if (deviceType == 'mobile') {
         root.style.setProperty('--header-nickname-width', '100%');
         root.style.setProperty('--header-nickname-text-align', 'center');
-        root.style.setProperty('--nav-btn-text-size', '3rem');
-        root.style.setProperty('--header-nickname-size', '6rem');
+        root.style.setProperty('--nav-btn-text-size', '2.25rem');
+        root.style.setProperty('--header-nickname-size', '4.5rem');
         root.style.setProperty('--header-nickname-margin-left', 'auto');
         root.style.setProperty('--nav-btn-padding', '2rem');
     } else {
@@ -56,5 +55,6 @@ function initProperties() {
 }
 
 // window.addEventListener('resize', function (event) {
+//    countCardsGrid()
 // });
 

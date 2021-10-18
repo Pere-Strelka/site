@@ -17,11 +17,11 @@
   <div class="navigation">
     <div class="nav-center">
       <button class="nav-btn nav-btn-main" onclick="window.location.href='index.html'"
-        onmouseover="makeNavProperties( root, 'nav-btn-main' )" id="nav-btn-main">MAIN</button>
+        id="nav-btn-main">MAIN</button>
       <button class="nav-btn nav-btn-portfolio" onclick="window.location.href='portfolio.html'"
-        onmouseover="makeNavProperties( root, 'nav-btn-portfolio' )" id="nav-btn-portfolio">PORTFOLIO</button>
+        id="nav-btn-portfolio">PORTFOLIO</button>
       <button class="nav-btn nav-btn-contacts" onclick="window.location.href='contacts.html'"
-        onmouseover="makeNavProperties( root, 'nav-btn-contacts' )" id="nav-btn-contacts">CONTACTS</button>
+        id="nav-btn-contacts">CONTACTS</button>
     </div>
   </div>
 
@@ -74,8 +74,7 @@
 </body>
 
 <script type="text/javascript">
-  initProperties();
-  makeNavProperties(root, 'nav-btn-main');
+  initDefaultProperties();
 </script>
 
 </html>
