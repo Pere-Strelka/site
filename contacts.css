@@ -83,6 +83,7 @@
 
 .card-banner-text-copied {
     background-color: var(--card-color);
+    white-space: normal !important;
 }
 
 .card-discord {
