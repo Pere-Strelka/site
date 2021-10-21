@@ -78,6 +78,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    white-space: nowrap;
 }
 
 .card-banner-text-copied {
@@ -115,23 +116,24 @@
 }
 
 .card-banner-email-text-eng::before {
-    animation: 600ms copy-text-printing;
+    animation: 500ms copy-text-printing;
+    white-space: nowrap;
 }
 
 @keyframes copy-text-printing {
     0% {
         content: '';
     }
-    40% {
+    20% {
         content: ' ';
     }
-    55% {
+    40% {
         content: 'C '
     }
-    70% {
+    60% {
         content: 'CO ';
     }
-    85% {
+    80% {
         content: 'COP ';
     }
     100% {
