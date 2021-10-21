@@ -71,7 +71,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     text-align: center;
-    font-size: 20px;
     position: absolute;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -111,6 +110,45 @@
 }
 
 .card-email:hover .card-banner-email {
+    height: var(--card-size);
+    cursor: pointer;
+}
+
+.card-banner-email-text-eng::before {
+    animation: 600ms copy-text-printing;
+}
+
+@keyframes copy-text-printing {
+    0% {
+        content: '';
+    }
+    40% {
+        content: ' ';
+    }
+    55% {
+        content: 'C '
+    }
+    70% {
+        content: 'CO ';
+    }
+    85% {
+        content: 'COP ';
+    }
+    100% {
+        content: 'COPY ';
+    }
+}
+
+.card-banner-email:hover .card-banner-email-text-eng::before {
+    content: 'COPY ';
+}
+
+.card-twitter {
+    background: url("images/cards/card-twitter.jpg");
+    background-size: 100%;
+}
+
+.card-twitter:hover .card-banner-twitter {
     height: var(--card-size);
     cursor: pointer;
 }
