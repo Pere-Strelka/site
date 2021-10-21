@@ -32,34 +32,33 @@
 
   <div class="body-div">
     <div class="cards" id="cards_div">
-      <div class="card card-discord" id="card_discord">
-        <a class="card-banner card-banner-discord" href='https://discordapp.com/users/467012566699343872/'
-          target="_blank">
+      <a class="card card-discord" id="card_discord" href='https://discordapp.com/users/467012566699343872/' target="_blank">
+        <div class="card-banner card-banner-discord">
           <div class="card-banner-text">DISCORD</div>
-        </a>
-      </div>
-      <div class="card card-vk">
-        <a class="card-banner card-banner-vk" href='https://vk.com/pere_strelka' target="_blank">
+        </div>
+      </a>
+      <a class="card card-vk" href='https://vk.com/pere_strelka' target="_blank">
+        <div class="card-banner card-banner-vk">
           <div class="card-banner-text">VKONTAKTE</div>
-        </a>
-      </div>
-      <div class="card card-email">
-        <a class="card-banner card-banner-email" onclick='copyEmailToClipboard("pere_strelka@mail.ru", "email_banner_text")'>
+        </div>
+      </a>
+      <a class="card card-email" onclick='copyEmailToClipboard("pere_strelka@mail.ru", "email_banner_text")'>
+        <div class="card-banner card-banner-email">
           <div class="card-banner-text card-banner-email-text-eng" id="email_banner_text">E-MAIL</div>
-        </a>
-      </div>
-      <div class="card card-twitter">
-        <a class="card-banner card-banner-twitter" href='https://twitter.com/pere_strelka' target="_blank">
+        </div>
+      </a>
+      <a class="card card-twitter" href='https://twitter.com/pere_strelka' target="_blank">
+        <div class="card-banner card-banner-twitter">
           <div class="card-banner-text">TWITTER</div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   </div>
 </body>
 
 <script type="text/javascript">
   initDefaultProperties();
-  initContactsProperties();
+  initContacts();
 </script>
 
 </html>

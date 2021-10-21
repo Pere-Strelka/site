@@ -123,24 +123,28 @@
 }
 
 .card-banner-email-text-eng::before {
-    animation: 500ms copy-text-printing;
+    animation: 600ms copy-text-printing;
     white-space: nowrap;
+}
+
+.card-banner-email-text-mobile-eng::before {
+    content: 'COPY ';
 }
 
 @keyframes copy-text-printing {
     0% {
         content: '';
     }
-    20% {
+    40% {
         content: ' ';
     }
-    40% {
+    55% {
         content: 'C '
     }
-    60% {
+    70% {
         content: 'CO ';
     }
-    80% {
+    85% {
         content: 'COP ';
     }
     100% {
@@ -148,7 +152,7 @@
     }
 }
 
-.card-banner-email:hover .card-banner-email-text-eng::before {
+.card-email:hover .card-banner-email-text-eng::before {
     content: 'COPY ';
 }
 
