@@ -84,6 +84,12 @@
 .card-banner-text-copied {
     background-color: var(--card-color);
     white-space: normal !important;
+    transition: opacity var(--text-copied-disappearing-duration) ease-in-out;
+    opacity: 1;
+}
+
+.card-banner-text-copied--delete {
+    opacity: 0;
 }
 
 .card-discord {

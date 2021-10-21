@@ -5,19 +5,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function copyToClipboard(str, parent_el_id) {
-    navigator.clipboard.writeText(str);
-    
-    var text = document.createElement("div");
-    text.classList.add("card-banner-text");
-    text.classList.add("card-banner-text-copied");
-    text.innerHTML = 'COPIED: ' + str;
-    document.getElementById(parent_el_id).appendChild(text);
-
-    await sleep(2000);
-    document.getElementById(parent_el_id).removeChild(text);
-}
-
 function getDeviceType() {
     const userAgent = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
