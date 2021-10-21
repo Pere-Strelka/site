@@ -2,15 +2,15 @@ function initContacts() {
     initContactsProperties();
 
     if (deviceType == 'mobile') {
-        document.getElementById(parent_el_id).classList.add('card-banner-email-text-mobile-eng');
+        document.getElementById('email_banner_text').classList.add('card-banner-email-text-mobile-eng');
     }
 }
 
 function initContactsProperties() {
     if (deviceType == 'mobile') {
         document.getElementById('cards_div').classList.add("cards-mobile-grid");
-        root.style.setProperty('--card-size', '23rem');
-        root.style.setProperty('--card-banner-font-size', '2rem');
+        root.style.setProperty('--card-size', '26rem');
+        root.style.setProperty('--card-banner-font-size', '2.25rem');
     } else {
         document.getElementById('cards_div').classList.add("cards-desktop-grid");
         root.style.setProperty('--card-size', '18rem');
