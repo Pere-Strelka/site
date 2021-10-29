@@ -6,8 +6,8 @@ function initPortfolioProperties() {
     if (deviceType == 'mobile') {
         document.getElementById('cards_div').classList.add("cards-mobile-grid");
         root.style.setProperty('--card-height', '21rem');
-        root.style.setProperty('--card-font-size', '3rem');
-        root.style.setProperty('--card-title-font-size', '5rem');
+        root.style.setProperty('--card-font-size', '2.5rem');
+        root.style.setProperty('--card-title-font-size', '3rem');
         root.style.setProperty('--logo-size', '3.5rem');
     } else {
         document.getElementById('cards_div').classList.add("cards-desktop-grid");
