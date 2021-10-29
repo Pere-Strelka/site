@@ -66,6 +66,8 @@
     font-weight: bold;
     font-size: var(--card-title-font-size);
     color: var(--light-text-color);
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .card-text {
