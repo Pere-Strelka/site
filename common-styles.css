@@ -119,7 +119,7 @@
   padding-left: var(--nav-btn-padding, 2rem);
   padding-right: var(--nav-btn-padding, 2rem);
 
-  transition: all 200ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 @media (max-width: 600px) {
@@ -134,20 +134,20 @@
   }
 }
 
-@media (max-width: 450px) {
-  .nav-btn-destop {
-    --nav-btn-padding: 1.75rem;
+@media (max-width: 480px) {
+  .nav-btn-desktop {
+    --nav-btn-padding: 1rem;
   }
 }
 
-@media (min-width: 450px) {
-  .nav-btn-destop {
+@media (min-width: 480px) {
+  .nav-btn-desktop {
     --nav-btn-padding: 2.25rem;
   }
 }
 
 @media (min-width: 600px) {
-  .nav-btn-destop {
+  .nav-btn-desktop {
     --nav-btn-padding: 3.5rem;
   }
 }

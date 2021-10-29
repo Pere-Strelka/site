@@ -4,6 +4,9 @@
     --card-banner-center-color: #282828;
     --logo-size: 1.75rem;
     --tooltip-color: rgba(34, 33, 33, 0.603);
+    --card-font-size: 1.1rem;
+    --card-title-font-size: 1.5rem;
+    --card-height: 16rem;
 }
 
 
@@ -37,7 +40,7 @@
 }
 
 .cards-mobile-grid {
-    width: 96%;
+    width: 94%;
 }
 
 .card {
@@ -61,12 +64,12 @@
 
 .card-title {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: var(--card-title-font-size);
     color: var(--light-text-color);
 }
 
 .card-text {
-    font-size: 1.1rem;
+    font-size: var(--card-font-size);
     color: var(--light-text-color);
     padding-left: 1.75rem;
     padding-right: 1.75rem;
