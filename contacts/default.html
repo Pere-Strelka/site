@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<title>Contacts - Pere_Strelka</title>
 <html class="main">
 
-<link rel="stylesheet" href="common-styles.css?v=4">
-<link rel="stylesheet" href="contacts.css?v=3">
-
-<script type="text/javascript" src="scripts.js"></script>
-<script type="text/javascript" src="scripts-contacts.js"></script>
-<style>
-  .nav-btn-contacts::before {
-    transform: scaleX(1);
-  }
-</style>
+<head>
+  <title>Contacts - Pere_Strelka</title>
+  <link rel="stylesheet" href="../common-styles.css?v=1">
+  <link rel="stylesheet" href="default.css?v=1">
+  <script type="text/javascript" src="../common-scripts.js"></script>
+  <script type="text/javascript" src="default.js"></script>
+  <style>
+    .nav-btn-contacts::before {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
 
 <body class="general">
-  <div class="header">
+  <header class="header">
     <h1 class="header-nickname" onclick="window.location.href='index.html'">PERE_STRELKA</h1>
-  </div>
+  </header>
 
-  <div class="navigation">
+  <nav class="navigation">
     <div class="nav-center">
-      <button class="nav-btn nav-btn-main" onclick="window.location.href='index.html'"
+      <button class="nav-btn" onclick="window.location.href='../index.html'"
         id="nav-btn-main">MAIN</button>
-      <button class="nav-btn nav-btn-portfolio" onclick="window.location.href='portfolio.html'"
+      <button class="nav-btn" onclick="window.location.href='../portfolio/default.html'"
         id="nav-btn-portfolio">PORTFOLIO</button>
-      <button class="nav-btn nav-btn-contacts" onclick="window.location.href='contacts.html'"
+      <button class="nav-btn" onclick="window.location.href='../contacts/default.html'"
         id="nav-btn-contacts">CONTACTS</button>
     </div>
-  </div>
-
+  </nav>
 
   <div class="body-div">
     <div class="cards" id="cards_div">
-      <a class="card card-discord" id="card_discord" href='https://discordapp.com/users/467012566699343872/' target="_blank">
+      <a class="card card-discord" id="card_discord" href='https://discordapp.com/users/467012566699343872/'
+        target="_blank">
         <div class="card-banner card-banner-discord">
           <div class="card-banner-text">DISCORD</div>
         </div>
@@ -54,6 +55,12 @@
       </a>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-copyright">©2021 Pere_Strelka</div>
+    </div>
+  </footer>
 </body>
 
 <script type="text/javascript">

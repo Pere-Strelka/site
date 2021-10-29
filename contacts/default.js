@@ -3,6 +3,8 @@ function initContacts() {
 
     if (deviceType == 'mobile') {
         document.getElementById('email_banner_text').classList.add('card-banner-email-text-mobile-eng');
+    } else {
+        document.getElementById('email_banner_text').classList.add('card-banner-email-text-eng');       
     }
 }
 

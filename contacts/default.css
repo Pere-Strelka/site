@@ -17,27 +17,23 @@
 
 .cards-mobile-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 }
 
 @media (max-width: 800px) {
     .cards-desktop-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
     }
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
     .cards-desktop-grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
     }
 }
 
 @media (min-width: 1200px) {
     .cards-desktop-grid {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
     }
 }
 
@@ -97,7 +93,7 @@
 }
 
 .card-discord {
-    background: url("images/cards/card-discord.jpg");
+    background: url("../images/cards/card-discord.jpg");
     background-size: 100%;
 }
 
@@ -106,7 +102,7 @@
 }
 
 .card-vk {
-    background: url("images/cards/card-vk.jpg");
+    background: url("../images/cards/card-vk.jpg");
     background-size: 100%;
 }
 
@@ -115,7 +111,7 @@
 }
 
 .card-email {
-    background: url("images/cards/card-email.jpg");
+    background: url("../images/cards/card-email.jpg");
     background-size: 100%;
 }
 
@@ -124,8 +120,7 @@
 }
 
 .card-banner-email-text-eng::before {
-    animation: 600ms copy-text-printing;
-    white-space: nowrap;
+    content: '';
 }
 
 .card-banner-email-text-mobile-eng::before {
@@ -155,10 +150,11 @@
 
 .card-email:hover .card-banner-email-text-eng::before {
     content: 'COPY ';
+    animation: 600ms copy-text-printing;
 }
 
 .card-twitter {
-    background: url("images/cards/card-twitter.jpg");
+    background: url("../images/cards/card-twitter.jpg");
     background-size: 100%;
 }
 

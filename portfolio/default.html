@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="main">
+<head>
+  <title>Main page - Pere_Strelka</title>
+  <link rel="icon" href="">
+  <link rel="stylesheet" href="../common-styles.css?v=4">
+  <link rel="stylesheet" href="default.css?v=6">
+  <script type="text/javascript" src="../common-scripts.js"></script>
+  <script type="text/javascript" src="default.js"></script>
+  <style>
+    .nav-btn-portfolio::before {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+
+<body class="general">
+  <header class="header">
+    <h1 class="header-nickname" onclick="window.location.href='index.html'">PERE_STRELKA</h1>
+  </header>
+
+  <nav class="navigation">
+    <div class="nav-center">
+      <button class="nav-btn" onclick="window.location.href='../index.html'"
+        id="nav-btn-main">MAIN</button>
+      <button class="nav-btn" onclick="window.location.href='../portfolio/default.html'"
+        id="nav-btn-portfolio">PORTFOLIO</button>
+      <button class="nav-btn" onclick="window.location.href='../contacts/default.html'"
+        id="nav-btn-contacts">CONTACTS</button>
+    </div>
+  </nav>
+
+
+  <div class="body-div">
+    <div class="cards" id="cards_div">
+      <div class="card">
+        <div class="card-img card-github-img"></div>
+        <div class="card-body">
+          <h4 class="card-title">str-to-math-parsing [stmp]</h4>
+          <p class="card-text">Dynamic link library that can be used to parse relatively complicated math expressions, including functions.
+            <a class="link" href="https://github.com/Pere-Strelka/str-to-math-parsing" target="_blank">Click to learn more.</a>
+          </p>
+          <div class="card-icons-container">
+            <div class="dev-img card-icon">
+              <span class="tooltip">Status: in development</span>
+            </div> 
+            <div class="cplusplus-img card-icon">
+              <span class="tooltip">Language: C++</span>
+            </div> 
+          </div>      
+        </div> 
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-copyright">©2021 Pere_Strelka</div>
+    </div>
+  </footer>
+</body>
+
+<script type="text/javascript">
+  initDefaultProperties();
+  initPortfolio();
+</script>
+
+</html>

@@ -1,0 +1,151 @@
+:root {
+    --shadow-color: rgba(43, 37, 37, 0.555);
+    --card-color: #333;
+    --card-banner-center-color: #282828;
+    --logo-size: 1.75rem;
+    --tooltip-color: rgba(34, 33, 33, 0.603);
+}
+
+
+.cards {
+    height: auto;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-gap: 2rem;
+    justify-items: center;
+}
+
+@media (max-width: 968px) {
+    .cards-desktop-grid {
+        width: 80%;
+    }
+}
+
+@media (min-width: 968px) {
+    .cards-desktop-grid {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cards-desktop-grid {
+        width: 60%;
+    }
+}
+
+.cards-mobile-grid {
+    width: 96%;
+}
+
+.card {
+    width: 100%;
+    height: var(--card-height);
+    position: relative;
+    background-color: var(--card-color);
+    box-shadow: 8px 8px 5px 1px var(--shadow-color);
+    z-index: 1;
+}
+
+.card-body {
+    height: var(--card-height);
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    width: calc(100% - var(--card-height));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--light-text-color);
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: var(--light-text-color);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+
+.card-img {
+    width: var(--card-height);
+    height: var(--card-height);
+    display: inline-block;
+    position: relative;
+}
+
+.card-github-img {  
+    background: url("../images/cards/card-github.jpg"); 
+    background-size: 100%;
+}
+
+.card-icons-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.card-icon {
+    width: var(--logo-size);
+    display: inline;
+    position: relative;
+}
+
+.dev-img {
+    background: url("../images/logos/logo-dev.svg");
+    background-size: 100%;
+    height: calc(0.4 * var(--logo-size));   
+}
+
+.cplusplus-img {
+    background: url("../images/logos/logo-cplusplus.svg");
+    background-size: 100%;
+    height: calc(0.65 * var(--logo-size));
+}
+
+.card-icon:hover .tooltip {
+    visibility: visible;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--tooltip-color);  
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--light-text-color);
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5rem;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--tooltip-color) transparent transparent transparent;
+}
