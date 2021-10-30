@@ -21,21 +21,26 @@
     justify-items: center;
 }
 
-@media (max-width: 968px) {
+.cards-desktop-grid {
+    transition: width 500ms ease-in-out;
+}
+
+
+@media (max-width: 768px) {
     .cards-desktop-grid {
-        width: 80%;
+        width: 94%;
+    }
+}
+
+@media (min-width: 768px) {
+    .cards-desktop-grid {
+        width: 85%;
     }
 }
 
 @media (min-width: 968px) {
     .cards-desktop-grid {
-        width: 70%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .cards-desktop-grid {
-        width: 60%;
+        width: 80%;
     }
 }
 
@@ -54,11 +59,11 @@
 
 .card-body {
     height: var(--card-height);
+    width: calc(100% - var(--card-height));
     text-align: center;
     display: inline-block;
     position: absolute;
     margin: 0;
-    width: calc(100% - var(--card-height));
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -80,8 +85,18 @@
 .card-img {
     width: var(--card-height);
     height: var(--card-height);
-    display: inline-block;
+    display: var(--card-img-display);
     position: relative;
+}
+
+@media (max-width: 668px) {
+    .card-img {
+        display: none !important;
+    }
+
+    .card-body {
+        width: 100%;
+    }
 }
 
 .card-github-img {  
@@ -104,6 +119,7 @@
 }
 
 .card-icon {
+    height: var(--logo-size);
     width: var(--logo-size);
     display: inline;
     position: relative;
@@ -112,38 +128,46 @@
 .dev-img {
     background: url("../images/logos/logo-dev.svg");
     background-size: 100%;
-    height: calc(0.4 * var(--logo-size));   
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .cplusplus-img {
     background: url("../images/logos/logo-cplusplus.svg");
     background-size: 100%;
-    height: calc(0.65 * var(--logo-size));
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .card-icon:hover .tooltip {
-    visibility: visible;
+    transform: scaleY(1) translateX(-50%);
+}
+
+.card-icon:hover .tooltip::after {
+    transform: scaleY(1);
 }
 
 .tooltip {
-    visibility: hidden;
     width: fit-content;
     height: fit-content;
     background-color: var(--tooltip-color);  
     border-radius: 6px;
     position: absolute;
-    z-index: 1;
-    bottom: 150%;
+    z-index: 2;
+    bottom: 115%;
     left: 50%;
-    transform: translateX(-50%);
     color: var(--light-text-color);
     text-align: center;
     white-space: nowrap;
     padding: 0.5rem;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: scaleY(0) translateX(-50%);
+    transform-origin: bottom;
+    transition: transform 250ms ease-in-out;
 }
-  
+
+/* this is an arrow (triangle) under the tooltip */
 .tooltip::after {
     content: "";
     position: absolute;
@@ -153,4 +177,7 @@
     border-width: 5px;
     border-style: solid;
     border-color: var(--tooltip-color) transparent transparent transparent;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 100ms ease-in-out;
 }
