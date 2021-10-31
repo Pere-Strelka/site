@@ -4,14 +4,14 @@
 }
 
 .cards {
-    width: var(--cards-grid-width);
+    width: 100%;
     height: auto;
     display: grid;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    grid-gap: 2rem;
+    grid-gap: clamp(1.5rem, 4vw, 3.5rem);
     justify-items: center;
 }
 
@@ -31,6 +31,8 @@
     box-shadow: 8px 8px 5px 1px var(--shadow-color);
     position: relative;
     color: var(--light-text-color);
+    border-radius: 8px;
+    overflow: hidden;
 
     z-index: 1;
 }
@@ -79,7 +81,7 @@
 }
 
 .card-discord {
-    background: url("../images/cards/card-discord.jpg");
+    background: url("images/cards/card-discord.jpg");
     background-size: 100%;
 }
 
@@ -88,7 +90,7 @@
 }
 
 .card-vk {
-    background: url("../images/cards/card-vk.jpg");
+    background: url("images/cards/card-vk.jpg");
     background-size: 100%;
 }
 
@@ -97,7 +99,7 @@
 }
 
 .card-email {
-    background: url("../images/cards/card-email.jpg");
+    background: url("images/cards/card-email.jpg");
     background-size: 100%;
 }
 
@@ -140,7 +142,7 @@
 }
 
 .card-twitter {
-    background: url("../images/cards/card-twitter.jpg");
+    background: url("images/cards/card-twitter.jpg");
     background-size: 100%;
 }
 

@@ -13,12 +13,10 @@ function initContactsProperties() {
         document.getElementById('cards_div').classList.add("cards-mobile-grid");
         root.style.setProperty('--card-size', '26rem');
         root.style.setProperty('--card-banner-font-size', '2.25rem');
-        root.style.setProperty('--cards-grid-width', '96%');
     } else {
         document.getElementById('cards_div').classList.add("cards-desktop-grid");
         root.style.setProperty('--card-size', '18rem');
-        root.style.setProperty('--card-banner-font-size', '1.2rem');
-        root.style.setProperty('--cards-grid-width', '80%');
+        root.style.setProperty('--card-banner-font-size', '1.2rem');  
     }
 }
 

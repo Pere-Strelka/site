@@ -7,6 +7,7 @@
     --card-font-size: 1.1rem;
     --card-title-font-size: 1.5rem;
     --card-height: 16rem;
+    --card-padding: 1.2rem;
 }
 
 
@@ -54,6 +55,9 @@
     position: relative;
     background-color: var(--card-color);
     box-shadow: 8px 8px 5px 1px var(--shadow-color);
+    border-radius: 8px;
+    overflow: hidden;
+    
     z-index: 1;
 }
 
@@ -71,15 +75,31 @@
     font-weight: bold;
     font-size: var(--card-title-font-size);
     color: var(--light-text-color);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: calc(var(--card-width) * 1px);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-top: var(--card-padding);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
 }
 
 .card-text {
+    width: 100%;
     font-size: var(--card-font-size);
     color: var(--light-text-color);
     padding-left: 1.75rem;
     padding-right: 1.75rem;
+    overflow: overlay;
+    position: absolute;
+    margin: 0;
+    bottom: calc(var(--logo-size) + var(--card-padding));
+    top: calc(var(--card-title-font-size) + var(--card-padding) * 2);
+}
+
+.card-text::-webkit-scrollbar {
+    width: 0.5rem;
 }
 
 .card-img {
@@ -100,7 +120,7 @@
 }
 
 .card-github-img {  
-    background: url("../images/cards/card-github.jpg"); 
+    background: url("images/cards/card-github.jpg"); 
     background-size: 100%;
 }
 
@@ -126,14 +146,14 @@
 }
 
 .dev-img {
-    background: url("../images/logos/logo-dev.svg");
+    background: url("images/logos/logo-dev.svg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .cplusplus-img {
-    background: url("../images/logos/logo-cplusplus.svg");
+    background: url("images/logos/logo-cplusplus.svg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
