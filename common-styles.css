@@ -23,8 +23,8 @@
 
 .container {
   width: var(--body-width);
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 *, *::before, *::after {
@@ -60,12 +60,20 @@
 
 
 .header {
-  display: block;
-  height: auto;
+  height: 15vh;
   margin: 0;
   width: 100%;
   background-color: var(--background-color-header);
-  align-content: center;
+  display: flex;
+
+}
+
+.header-container {
+  display: flex;
+  height: auto;
+  margin: 0;
+  align-items: center;
+  gap: 3rem;
 }
 
 .header-nickname {
@@ -79,8 +87,37 @@
   background-clip: text;
   display: inline-block;
   -webkit-text-fill-color: transparent;
-  margin-left: var(--header-nickname-margin-left);
+  margin: 0;
   margin-right: auto;
+}
+
+.locale-btns-container {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  gap: 1.5rem;
+}
+
+.locale-btns-container::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5px;
+  background-color: var(--accent-color);
+  height: 100%;
+}
+
+.locale-btn {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--accent-color);
+  font-size: var(--nav-btn-text-size);
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
 }
 
 .navigation {
@@ -123,33 +160,35 @@
   margin-right: auto;
   padding-left: var(--nav-btn-padding, 2rem);
   padding-right: var(--nav-btn-padding, 2rem);
+
+  transition: all 500ms ease;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .nav-btn-tablet {
     --nav-btn-padding: 1.75rem;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .nav-btn-tablet {
     --nav-btn-padding: 2.5rem
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .nav-btn-desktop {
     --nav-btn-padding: 1rem;
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 550px) {
   .nav-btn-desktop {
     --nav-btn-padding: 2.25rem;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .nav-btn-desktop {
     --nav-btn-padding: 3.5rem;
   }
@@ -219,6 +258,7 @@
   color: var(--accent-color);
   text-decoration: none;
   white-space: nowrap;
+  transition: color 200ms ease;
 }
 
 .link::after {
@@ -228,7 +268,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: 1px;
+  height: 0.08em;
   background-color: var(--accent-color);
   transform: scaleX(0);
   transform-origin: right;

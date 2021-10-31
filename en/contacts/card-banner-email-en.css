@@ -1,0 +1,29 @@
+.card-banner-email-text-mobile::before {
+    content: 'COPY ';
+}
+
+@keyframes copy-text-printing {
+    0% {
+        content: '';
+    }
+    40% {
+        content: ' ';
+    }
+    55% {
+        content: 'C '
+    }
+    70% {
+        content: 'CO ';
+    }
+    85% {
+        content: 'COP ';
+    }
+    100% {
+        content: 'COPY ';
+    }
+}
+
+.card-email:hover .card-banner-email-text::before {
+    content: 'COPY ';
+    animation: 600ms copy-text-printing;
+}

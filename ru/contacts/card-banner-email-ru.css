@@ -1,0 +1,47 @@
+.card-banner-email-text-mobile::before {
+    content: 'КОПИРОВАТЬ ';
+}
+
+@keyframes copy-text-printing {
+    0% {
+        content: '';
+    }
+    20% {
+        content: ' ';
+    }
+    28% {
+        content: 'К '
+    }
+    36% {
+        content: 'КО ';
+    }
+    44% {
+        content: 'КОП ';
+    }
+    52% {
+        content: 'КОПИ ';
+    }
+    60% {
+        content: 'КОПИР ';
+    }
+    68% {
+        content: 'КОПИРО '
+    }
+    76% {
+        content: 'КОПИРОВ ';
+    }
+    84% {
+        content: 'КОПИРОВА ';
+    }
+    92% {
+        content: 'КОПИРОВАТ ';
+    }
+    100% {
+        content: 'КОПИРОВАТЬ ';
+    }
+}
+
+.card-email:hover .card-banner-email-text::before {
+    content: 'КОПИРОВАТЬ ';
+    animation: 600ms copy-text-printing;
+}
