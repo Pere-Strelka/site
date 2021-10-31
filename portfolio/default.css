@@ -59,7 +59,7 @@
 
 .card-body {
     height: var(--card-height);
-    width: calc(100% - var(--card-height));
+    width: var(--card-width);
     text-align: center;
     display: inline-block;
     position: absolute;
@@ -95,7 +95,7 @@
     }
 
     .card-body {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
