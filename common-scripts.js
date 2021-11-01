@@ -36,7 +36,7 @@ function initDefaultProperties() {
         root.style.setProperty('--header-height', '10vh');
         root.style.setProperty('--nav-btn-text-size', '2.25rem');
         root.style.setProperty('--header-nickname-size', '4rem');
-        root.style.setProperty('--body-width', '94%');
+        root.style.setProperty('--body-width', '90%');
     } else {
         for (index = 0; index < buttons.length; index++) {
             buttons[index].classList.add('nav-btn-desktop');
