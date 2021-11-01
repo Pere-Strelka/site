@@ -7,7 +7,7 @@ function initPortfolioProperties() {
         document.getElementById('cards_div').classList.add("cards-mobile-grid");
         root.style.setProperty('--card-height', '26rem');
         root.style.setProperty('--card-width', '100%');
-        root.style.setProperty('--card-font-size', '1.65rem');
+        root.style.setProperty('--card-font-size', '1.7rem');
         root.style.setProperty('--card-title-font-size', '2.75rem');
         root.style.setProperty('--logo-size', '3.5rem');
         root.style.setProperty('--card-img-display', 'none');
