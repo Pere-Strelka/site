@@ -79,8 +79,7 @@
 .header-nickname {
   cursor: pointer;
   font-size: var(--header-nickname-size);
-  width: var(--header-nickname-width);
-  text-align: var(--header-nickname-text-align);
+  width: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: -webkit-linear-gradient(var(--gradient-nickname-color1), var(--accent-color), var(--gradient-nickname-color3));
   -webkit-background-clip: text;
@@ -268,7 +267,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: 0.08em;
+  height: 0.05em;
   background-color: var(--accent-color);
   transform: scaleX(0);
   transform-origin: right;

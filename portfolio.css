@@ -55,8 +55,7 @@
     position: relative;
     background-color: var(--card-color);
     box-shadow: 8px 8px 5px 1px var(--shadow-color);
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 8px; 
     
     z-index: 1;
 }
@@ -107,6 +106,8 @@
     height: var(--card-height);
     display: var(--card-img-display);
     position: relative;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 @media (max-width: 668px) {
