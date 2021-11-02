@@ -86,11 +86,10 @@
 
 .card-text {
     width: 100%;
-    font-size: var(--card-font-size);
-    color: var(--light-text-color);
     padding-left: 1.75rem;
     padding-right: 1.75rem;
-    overflow: overlay;
+    /* firefox */
+    overflow: auto;  
     position: absolute;
     margin: 0;
     bottom: calc(var(--logo-size) + var(--card-padding));
@@ -110,13 +109,23 @@
     border-top-left-radius: 8px;
 }
 
-@media (max-width: 668px) {
+@media (max-width: 668px), (orientation: portrait) {
     .card-img {
-        display: none !important;
+        --card-img-display: none;
     }
 
     .card-body {
-        width: 100% !important;
+        --card-width: 100%;
+    }
+}
+
+@media (orientation: landscape) {
+    .card-img {
+        --card-img-display: inline-block;
+    }
+
+    .card-body {
+        --card-width: calc(100% - var(--card-height));
     }
 }
 
@@ -161,7 +170,7 @@
 }
 
 .card-icon:hover .tooltip {
-    transform: scaleY(1) translateX(-50%);
+    transform: scaleY(1) translateX(-85%);
 }
 
 .card-icon:hover .tooltip::after {
@@ -183,7 +192,7 @@
     padding: 0.5rem;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transform: scaleY(0) translateX(-50%);
+    transform: scaleY(0) translateX(-85%);
     transform-origin: bottom;
     transition: transform 250ms ease-in-out;
 }
@@ -193,7 +202,7 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 85%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;

@@ -13,13 +13,6 @@
     margin-bottom: 2rem;
     grid-gap: clamp(1.5rem, 4vw, 3.5rem);
     justify-items: center;
-}
-
-.cards-mobile-grid {
-    grid-template-columns: 1fr 1fr;
-}
-
-.cards-desktop-grid {
     grid-template-columns: repeat(auto-fit, minmax(var(--card-size), 1fr));
 }
 
