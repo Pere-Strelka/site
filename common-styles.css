@@ -126,8 +126,7 @@
   background-color: var(--nav-background-color);
   width: 100%;
   vertical-align: middle;
-  position: -webkit-sticky;
-  position: sticky;
+  position: sticky; 
   top: 0em;
   z-index: 100;
   overflow: hidden;
