@@ -225,7 +225,7 @@
 
 
 
-.footer {
+footer {
   position: relative;
   padding-top: 2rem;
   width: 100%;
@@ -249,13 +249,13 @@
   color: var(--light-text-color);
 }
 
-p {
+p, li {
   font-size: var(--text-font-size);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--light-text-color);
 }
 
-.title {
+h1 {
   font-size: min(4vh, 2.2rem);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--light-text-color);
