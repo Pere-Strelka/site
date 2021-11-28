@@ -34,7 +34,7 @@ function initDefaultProperties() {
         }
         root.style.setProperty('--footer-display', 'none');
         root.style.setProperty('--header-height', 'max(10vh, 5rem)');
-        root.style.setProperty('--text-font-size', 'min(3.5vh, 2rem)');
+        root.style.setProperty('--text-font-size', 'min(3.5vh, 1.7rem)');
         root.style.setProperty('--nav-btn-text-size', 'min(4vh, 2.25rem)');
         root.style.setProperty('--header-nickname-size', 'min(8vh, 4rem)');
     } else {
